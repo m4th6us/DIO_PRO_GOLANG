@@ -22,35 +22,22 @@ func multiply_tree(){
 func pin_pan() {
 
 	pin_pan_count := make(map[int]string)
+	sum_pin := 0
+	sum_pan := 0
 
 	for i := 1; i <= 100; i ++ {
 		
 		if (i % 3 == 0) {
 
 			pin_pan_count[i] = "Pin"
+			sum_pin ++
 
 		} else if (i % 5 == 0) {
 
 			pin_pan_count[i] = "Pan"
-
-		} 
-
-	}
-
-	sum_pin := 0
-	sum_pan := 0
-
-	for _, value := range pin_pan_count {
-
-		if (value == "Pin") {
-
-			sum_pin ++
-
-		} else {
-
 			sum_pan ++
 
-		}
+		} 
 
 	}
 
